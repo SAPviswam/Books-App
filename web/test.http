@@ -1,0 +1,31 @@
+### >>  To get Books Data
+GET http://localhost:4004/BooksSRV/Books HTTP/1.1
+
+### >>  To get Author Data
+GET http://localhost:4004/BooksSRV/Author HTTP/1.1
+### >>  To get Address Data
+GET http://localhost:4004/BooksSRV/Address HTTP/1.1
+### >>  To get Books Data data with the cardinality relation
+GET http://localhost:4004/BooksSRV/Books?$expand=author,addresses HTTP/1.1
+### >>  Adding details to Books Entity
+POST http://localhost:4004/BooksSRV/Books HTTP/1.1
+Content-Type: application/json
+
+    {
+      "ID"              : "98950f06-061b-11ef-89f2-325096b39f47",
+      "title"           : "Monster",
+      "stock"           : 23,
+      "author_name"     : "Reyansh",
+      "genre"           : "Humor"
+      } 
+
+### >>  Adding details to Author Entity
+POST http://localhost:4004/BooksSRV/Author HTTP/1.1
+Content-Type: application/json
+
+{
+"ID"            : "98950f06-061b-11ef-89f2-325096b39f49",
+"qualification" : "Degree",
+"DOB"           : "1970-11-20",
+"age"           :53
+}
