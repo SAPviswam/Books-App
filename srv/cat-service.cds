@@ -7,7 +7,7 @@ service BookService {
     entity Address  as projection on my.Address;
     // @insert                                     // restrict entity access to Add and Read
     // entity Author as projection on my.Author;
-    @insert                                     // restrict entity access to Add-only
+    // @insert                                     // restrict entity access to Add-only
     entity Author as projection on my.Author;
 
 }
